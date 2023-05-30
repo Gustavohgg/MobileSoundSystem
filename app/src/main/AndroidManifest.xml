@@ -14,9 +14,26 @@
 
         <activity
             android:name=".controlador.MainActivity"
-            android:exported="false">
+            android:exported="true">
 
         </activity>
+
+        <activity
+            android:name=".controlador.FuncionariosActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".controlador.CadGerenteActivity">
+
+        </activity>
+
+        <activity
+            android:name=".controlador.CadVendedorActivity">
+
+        </activity>
+
+
         <activity
             android:name=".controlador.LoginActivity"
             android:exported="true">

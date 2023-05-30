@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.example.mobilesoundsystem.R;
 
-public abstract class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     private Button btnFuncionarios;
     private Button btnEstoque;
@@ -32,12 +32,11 @@ public abstract class MainActivity extends AppCompatActivity {
 
         btnFuncionarios.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent telaFuncionarios = new Intent(getApplicationContext(), FuncionariosActivity.class);
                 startActivity(telaFuncionarios);
             }
         });
-
 
     }
 
