@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MobileSoundSystem</string>
+    <string-array name="tipos_usuarios">
+        <item>Diretor</item>
+        <item>Gerente</item>
+        <item>Vendedor</item>
+    </string-array>
+</resources>
