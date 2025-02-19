@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controlador.VendaActivity">
+
+    <!-- Código do Produto -->
+    <EditText
+        android:id="@+id/etCodigoProduto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Código do Produto"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Nome do Produto -->
+    <EditText
+        android:id="@+id/etNomeProduto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Produto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCodigoProduto"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Categoria -->
+    <EditText
+        android:id="@+id/etCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Categoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNomeProduto"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Quantidade Disponível -->
+    <EditText
+        android:id="@+id/etQuantidadeDisponivel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Quantidade Disponível"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCategoria"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Quantidade Vendida -->
+    <EditText
+        android:id="@+id/etQuantidadeVendida"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Quantidade Vendida"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etQuantidadeDisponivel"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Preço Unitário -->
+    <EditText
+        android:id="@+id/etPrecoUnitario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Preço Unitário"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etQuantidadeVendida"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Desconto -->
+    <EditText
+        android:id="@+id/etDesconto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Desconto (%)"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPrecoUnitario"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Preço Total -->
+    <TextView
+        android:id="@+id/tvPrecoTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Preço Total: R$ 0,00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDesconto"
+        android:layout_margin="16dp" />
+
+    <!-- Forma de Pagamento -->
+    <Spinner
+        android:id="@+id/spinnerFormaPagamento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrecoTotal"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Botão Adicionar Produto -->
+    <Button
+        android:id="@+id/btnAdicionarProduto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Produto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerFormaPagamento"
+        android:layout_margin="16dp" />
+
+    <!-- Lista de Itens na Venda -->
+    <ListView
+        android:id="@+id/lvItensVenda"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAdicionarProduto"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Botão Finalizar Venda -->
+    <Button
+        android:id="@+id/btnFinalizarVenda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Finalizar Venda"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lvItensVenda"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

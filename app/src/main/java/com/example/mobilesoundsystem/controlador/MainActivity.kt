@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnVendas: Button
     private lateinit var btnLogout: Button
     private lateinit var tipoUsuario: String // Variável para armazenar o tipo de usuário
+    private lateinit var btnProduto: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         btnCliente = findViewById(R.id.btnCliente)
         btnVendas = findViewById(R.id.btnVendas)
         btnLogout = findViewById(R.id.btnLogout)
+        btnProduto = findViewById(R.id.btnProduto)
 
         // Recupera o tipo de usuário passado do LoginActivity
         tipoUsuario = intent.getStringExtra("TIPO_USUARIO") ?: ""
@@ -47,7 +50,21 @@ class MainActivity : AppCompatActivity() {
             val telaLogin = Intent(this, LoginActivity::class.java)
             startActivity(telaLogin)
         }
-        // Lógica para outros botões, se necessário
-        // Por exemplo, você pode adicionar mais verificações ou ações para os outros botões aqui
+        btnEstoque.setOnClickListener {
+            val telaEstoque = Intent(this, EstoqueActivity::class.java)
+            startActivity(telaEstoque)
+        }
+        btnVendas.setOnClickListener {
+            val telaVendas = Intent(this, VendaActivity::class.java)
+            startActivity(telaVendas)
+        }
+        btnProduto.setOnClickListener{
+            val telaProduto = Intent( this, CadProdutoActivity::class.java)
+            startActivity(telaProduto)
+        }
+        btnCliente.setOnClickListener{
+            val telaCliente = Intent(this, CadClienteActivity::class.java)
+            startActivity(telaCliente)
+        }
     }
 }
